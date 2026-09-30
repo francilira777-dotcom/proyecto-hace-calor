@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 196, 0, 0.35), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(255, 70, 0, 0.35), transparent 30%),
+        linear-gradient(135deg, #ff512f, #f09819);
+
+    color: white;
+}
+
+/* Tarjeta principal */
+
+.contenedor {
+    width: 440px;
+    padding: 45px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.13);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 28px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+    animation: aparecer 0.8s ease;
+}
+
+/* Título */
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Texto */
+
+p {
+    font-size: 18px;
+    color: #fff5e6;
+    margin-bottom: 25px;
+}
+
+/* Input */
+
+input {
+    width: 100%;
+
+    padding: 16px;
+
+    border: 2px solid transparent;
+    border-radius: 14px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #333;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+input:focus {
+    border-color: #ffd166;
+
+    box-shadow:
+        0 0 0 4px rgba(255, 209, 102, 0.2),
+        0 0 20px rgba(255, 209, 102, 0.4);
+}
+
+/* Botón */
+
+button {
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(90deg, #ffb703, #fb8500);
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.02);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(255, 183, 3, 0.35);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Resultado */
+
+#resultado {
+    min-height: 30px;
+
+    margin-top: 28px;
+    margin-bottom: 0;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    color: white;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    animation: resultado 0.4s ease;
+}
+
+/* Animación de entrada */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes resultado {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
